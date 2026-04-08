@@ -25,7 +25,7 @@ Burp Suite is a Java-based framework used for penetration testing of **web and m
   <img width="40%" src="https://github.com/user-attachments/assets/cb28cf07-9882-4eb2-a6c1-3bbc729238e6" />
 </div>
 <br>
-When you first open Burp Suite, you're greeted with the **Dashboard**, which contains:
+When you first open Burp Suite, you're greeted with the Dashboard, which contains:
 <br>
 
 - **Tasks** — Background tasks Burp runs while in use. Community defaults to a *Live Passive Crawl*, which silently logs visited pages.
