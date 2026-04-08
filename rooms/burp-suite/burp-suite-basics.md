@@ -70,7 +70,7 @@ Burp separates settings into two scopes:
 - **User Options** — Apply globally, persist across all projects. Includes UI preferences, keybindings, TLS certificates.
 - **Project Options** — Scoped to the current project. Useful for per-engagement configurations.
 
-> Key detail: **Client-Side TLS Certificates** configured in User Options *can* be overridden on a per-project basis. This matters in environments with mutual TLS (mTLS). Additionally, project settings matter less in the Community Edition as projects can'be saved.
+> Key detail: **Client-Side TLS Certificates** configured in User Options *can* be overridden on a per-project basis. This matters in environments with mutual TLS (mTLS). Additionally, project settings matter less in the Community Edition as projects can't be saved.
 
 ---
 
