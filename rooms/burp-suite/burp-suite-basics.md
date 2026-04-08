@@ -206,6 +206,6 @@ The server processes the injected payload — the client-side filter was complet
 
 ## Reflections
 
-This room is mostly conceptual but it was well worth the time. It's useful having a mental model of *how* Burp is structured will be useful for any future web vulnerability scanning exercises going forward. 
+This room is mostly conceptual but it was well worth the time. It's useful having an understanding of *how* Burp Suite is structured as this will be useful for any future web vulnerability scanning exercises I do going forward. 
 
 ---
