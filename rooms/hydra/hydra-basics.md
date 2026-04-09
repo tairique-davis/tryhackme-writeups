@@ -71,6 +71,7 @@ Before touching Hydra, I intercepted a failed login attempt in Burp Suite to con
 ### The failure string has to be exact
 
 The `F=` value in the `http-post-form` module needs to match the application's failure response character for character. Even a slight mismatch causes Hydra to treat every attempt as successful. Always verify from an actual failed request — not from memory or assumption. In our case the inital failed login validated the target's failure response: 
+
 <img width="40%" src="https://github.com/user-attachments/assets/08d73ea0-ae8a-4d71-9b96-1ab8629b53fb" />
 
 ---
