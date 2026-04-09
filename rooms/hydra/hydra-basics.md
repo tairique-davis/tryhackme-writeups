@@ -137,7 +137,7 @@ Weak passwords make wordlist attacks highly effective. Strong password practices
 - Unique alphanumeric combinations
 - Avoiding default or reused credentials
 
-These measures significantly reduce the likelihood of passwords appearing in common wordlists like rockyou.txt.
+These measures significantly reduce the likelihood of passwords appearing in common wordlists like `rockyou.txt`
 
 ---
 ## References
