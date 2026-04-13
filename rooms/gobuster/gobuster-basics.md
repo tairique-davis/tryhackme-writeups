@@ -58,7 +58,7 @@ Gobuster filters out `404 Not Found` responses by default and reports everything
 The `dir` mode brute-forces directories and files on a web server by appending each wordlist entry to the target URL and sending an HTTP GET request.
 
 <div>
-  <img width="80%" src="SCREENSHOT_PLACEHOLDER_DIR_SCAN" />
+  <img width="40%" src="https://github.com/user-attachments/assets/a8835ca4-849d-4e58-9d73-bb81c5bb5d47" />
 </div>
 <br>
 
@@ -89,11 +89,6 @@ This checks for `/admin`, `/admin.php`, `/admin.html`, and `/admin.txt` — usef
 
 The `dns` mode brute-forces subdomains by prepending each wordlist entry to the target domain and performing a DNS lookup.
 
-<div>
-  <img width="80%" src="SCREENSHOT_PLACEHOLDER_DNS_SCAN" />
-</div>
-<br>
-
 **Basic syntax:**
 ```
 gobuster dns -d <domain> -w <wordlist>
@@ -116,11 +111,6 @@ gobuster dns -d example.thm -w /usr/share/wordlists/dirb/common.txt
 #### `vhost` — Virtual Host Enumeration
 
 The `vhost` mode discovers **virtual hosts** — multiple websites hosted on the same IP address. Instead of DNS lookups, it sends HTTP requests with a modified `Host` header for each wordlist entry.
-
-<div>
-  <img width="80%" src="SCREENSHOT_PLACEHOLDER_VHOST_SCAN" />
-</div>
-<br>
 
 **Basic syntax:**
 ```
@@ -171,7 +161,7 @@ gobuster vhost -u "http://example.thm" -w /usr/share/wordlists/dirb/common.txt
 #### Environment Setup
 
 <div>
-  <img width="70%" src="SCREENSHOT_PLACEHOLDER_ROOM_LOADED" />
+ <img width="50%" src="https://github.com/user-attachments/assets/c6c5701f-ee05-4edd-adf5-8d872044b88b" />
 </div>
 <br>
 
@@ -184,20 +174,21 @@ The lab provides a target machine accessible over the TryHackMe VPN. The target 
 **Objective:** Find hidden directories and files on the target web server.
 
 <div>
-  <img width="55%" src="SCREENSHOT_PLACEHOLDER_DIR_RESULTS" />
-  <img width="40%" src="SCREENSHOT_PLACEHOLDER_DIR_BROWSER" />
+ <img width="45%" src="https://github.com/user-attachments/assets/6f424143-487d-4c04-a66c-769536c5ad29" />
+ <img width="45%" src="https://github.com/user-attachments/assets/fe8a0f54-a805-426f-8c8e-b926a203472a" />
 </div>
 <br>
 
 **Command used:**
 ```
-gobuster dir -u "http://www.example.thm/" -w /usr/share/wordlists/dirb/small.txt -t 64
+gobuster dir -u "http://www.offensivetools.thm/secret" -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x .js
 ```
 
 Notable results observed:
 - `200 OK` — directly accessible directories and files
 - `301 Moved Permanently` — redirects worth following manually
 - `403 Forbidden` — paths that exist but are access-restricted
+- `flag.js` file discovered at `http://www.offensivetools.thm/secret/flag.js`
 
 ---
 
@@ -206,13 +197,13 @@ Notable results observed:
 **Objective:** Discover subdomains associated with the target domain.
 
 <div>
-  <img width="70%" src="SCREENSHOT_PLACEHOLDER_DNS_RESULTS" />
+ <img width="40%" src="https://github.com/user-attachments/assets/8928df39-bd95-4390-965a-750258268ec0" />
 </div>
 <br>
 
 **Command used:**
 ```
-gobuster dns -d example.thm -w /usr/share/wordlists/dirb/common.txt
+gobuster dns -d example.thm -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt
 ```
 
 ---
@@ -222,13 +213,14 @@ gobuster dns -d example.thm -w /usr/share/wordlists/dirb/common.txt
 **Objective:** Identify virtual hosts sharing the target IP.
 
 <div>
-  <img width="70%" src="SCREENSHOT_PLACEHOLDER_VHOST_RESULTS" />
+ <img width="80%" src="https://github.com/user-attachments/assets/d6a8d51b-cdf4-4036-9b17-1fb35e04a0de" />
+ <img width="40%" src="https://github.com/user-attachments/assets/9dd2b7ed-fd20-4f5f-b21e-882240dd7452" />
 </div>
 <br>
 
 **Command used:**
 ```
-gobuster vhost -u "http://example.thm" -w /usr/share/wordlists/dirb/common.txt
+gobuster vhost -u "http://[MACHINE IP]" -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt
 ```
 
 ---
@@ -274,6 +266,6 @@ gobuster dir -u "http://target.thm/" -w /usr/share/wordlists/dirb/common.txt -q 
 
 ## Reflections
 
-This room gave me a solid foundation in what Gobuster is and how I can apply it.Gobuster is now a tool I'll reach for early in any web enumeration phase, right alongside Nmap in the initial recon stage. It's now a tool I can add to my toolbelt whenever I'm doing any web enumeration phase, right alongside Nmap during the initial recon stage of the attack chain.
+Short but insightful room, gave me a solid understanding in what Gobuster is about and how I can apply it. It's now a tool in my toolbelt whenever I'm doing any web enumeration phase, right alongside Nmap during the initial recon stage of the attack chain.
 
 ---
