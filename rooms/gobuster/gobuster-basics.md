@@ -1,3 +1,6 @@
+## TryHackMe - Gobuster
+
+---
 ## Overview
 
 Gobuster is a fast, open-source brute-force enumeration tool written in Go. It is used during the reconnaissance and enumeration phase of a penetration test to discover hidden directories and files on web servers, DNS subdomains, and virtual hosts. This room covers the foundational knowledge needed to understand Gobuster's three primary modes — `dir`, `dns`, and `vhost` — along with the key flags and command patterns used in practice.
