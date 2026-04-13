@@ -1,3 +1,6 @@
+## TryHackMe - BurpSuite
+
+---
 ## Overview
 
 Burp Suite is the industry-standard framework for web application penetration testing. Built in Java by PortSwigger, it acts as a man-in-the-middle proxy — sitting between your browser and a target web server, capturing and allowing manipulation of all HTTP/HTTPS traffic in real time. This room covers the foundational knowledge needed to navigate, configure, and begin using Burp Suite Community Edition effectively — with a core focus on the **Burp Proxy**.
